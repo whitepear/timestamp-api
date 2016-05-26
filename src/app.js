@@ -24,11 +24,20 @@ app.get('/:time?', function (req, res) {
             
             // check if month is valid
             // if so, check if date is valid respective to month
-            if (time[0] === 'January' || 'March' || 'May' || 'July' || 'August' || 'October' || 'December') {
+            if (time[0] === 'January' ||
+                time[0] === 'March' ||
+                time[0] === 'May' ||
+                time[0] === 'July' ||
+                time[0] === 'August' ||
+                time[0] === 'October' ||
+                time[0] === 'December') {
                 if (time[1] < 1 || time[1] > 31) {
                     isValid = false;
                 }
-            } else if (time[0] === 'September' || 'April' || 'June' || 'November') {
+            } else if (time[0] === 'September' ||
+                       time[0] === 'April' ||
+                       time[0] === 'June' ||
+                       time[0] === 'November') {
                 if (time[1] < 1 || time[1] > 30) {
                     isValid = false;
                 }
