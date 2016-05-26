@@ -57,18 +57,37 @@ app.get('/:time?', function (req, res) {
             if (isValid) {
                 var naturalTime = time.join(' ');
                 var unixTime = Math.floor(Date.parse(time)/1000);
-            }
+            } // if valid convert to unix format
             
         } else if (time.length === 1) {
+            
+            // check if number is less than zero
             if (time[0] < 0) {
                 isValid = false;
             }
-            // it's a unix timestamp, run some more tests to be sure
-            // can't be lower than zero
-            // can only be numbers -- no whitespace or letters
-            if (isValid) {
-                // convert
+            
+            // check if number is NaN (contains whitespace, letters, symbols, etc.)
+            if (isNaN(time[0])) {
+                isValid = false;
             }
+            
+            if (isValid) {
+                unixTime = time.join('');
+                naturalTime = new Date(time * 1000); // * 1000 to convert secs to ms
+                
+                var naturalMonth = naturalTime.getMonth(); // returns number representing month
+                var monthList = ['January', 'February', 'March', 'April',
+                'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                naturalMonth = monthList[naturalMonth]; // assign string version of month
+                
+                var naturalDate = naturalTime.getDate();
+                
+                var naturalYear = naturalTime.getFullYear();
+                
+                naturalTime = '"' + naturalMonth + ' ' + naturalDate + ', ' + naturalYear +'"'; // assemble into a string
+                
+            } // if valid convert to natural language format
+            
         } else {
             isValid = false;
         }
