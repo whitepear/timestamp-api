@@ -6,9 +6,9 @@ var app = express();
 app.get('/:time?', function (req, res) {
     var time = req.params.time;
     if (time === undefined) {
-        // send instruction html page
+        res.sendFile(__dirname + '/index.html');
     } else {
-        // send JSON data
+        res.send("WEW");
     }
 });
 

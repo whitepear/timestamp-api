@@ -1,3 +1,5 @@
+<!-- This file provides user instructions for accessing the API -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,5 +7,21 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
 </head>
 <body>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1>Timestamp Microservice</h1>
+                <div class="text-left">
+                    <h2>What is this?</h2>
+                    <h3>This is a web service which converts unix time to a human-readable form, or vice versa.</h3> 
+                    <h2>How to use this service:</h2>
+                    <h3>Append a forward slash followed by a <a href='https://en.wikipedia.org/wiki/Unix_time'>unix timestamp</a> or a natural
+                    language date to the end of the url in your browser's address bar. The service will return the provided
+                    time in both unix timestamp and natural language format.</h3>
+                    <h3>Natural language dates must follow this specific format: "Day Month Year" (e.g. "15 December 2015").</h3> 
+                    <h3>If a mistake is made when passing a time to the service, it will respond with "null" values in response.</h3>
+                </div> <!-- /div -->
+            </div> <!-- /col-xs-12 -->
+        </div> <!-- /row --> 
+    </div> <!-- /container -->
 </body>
