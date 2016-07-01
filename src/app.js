@@ -1,14 +1,14 @@
 // app does not support leap year detection for any year beyond 2099
-
 'use strict';
-
+var path = require('path');
 var express = require('express');
 var app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/:time?', function (req, res) {
     var time = req.params.time;
     if (time === undefined) {
-        res.sendFile(__dirname + '/index.html');
+        res.sendFile(__dirname + '/public/index.html');
     } else {
         var isValid = true; // variable that tracks validity of the date passed, false is valid, true is invalid
         time = time.split(' ');
@@ -100,6 +100,6 @@ app.get('/:time?', function (req, res) {
     }
 });
 
-app.listen('8080', function() {
+app.listen(3000, function() {
     console.log('Server is running...');
 });
