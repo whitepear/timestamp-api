@@ -4,11 +4,14 @@
   "description": "FreeCodeCamp coursework: build a timestamp microservice API.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4"
+  },
+  "engines": {
+    "node": "v4.4.2"
   }
 }
