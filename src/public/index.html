@@ -1,33 +1,29 @@
-<!-- This file provides user instructions for accessing the API -->
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Timestamp Microservice</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Timestamp Microservice</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <h1 class="bottom">Timestamp Microservice</h1>
-                <div class="text-left">
-                    <h2>What is this?</h2>
-                    <h3 class="bottom">This is a web service which converts unix time to a human-readable form, or vice versa.</h3> 
-                    <h2>How to use this service:</h2>
-                    <h3>Append a forward slash followed by a <a href='https://en.wikipedia.org/wiki/Unix_time'>unix timestamp</a> or a natural
-                    language date to the end of the URL in your browser's address bar. The service will return the provided
-                    time in both unix timestamp and natural language format.</h3>
-                    <h3>Natural language dates must follow this specific format: "Day Month Year" (e.g. "15 December 2015").</h3> 
-                    <h3 class="bottom">If a mistake is made when passing a time to the service, it will produce "null" values in response.</h3>
-                    <h2>Example Usage:</h2>
-                    <h3 class="example">https://unix-nat.herokuapp.com/December 15 2015</h3>
-                    <h3 class="bottom example">https://unix-nat.herokuapp.com/1450137600</h3>
-                    <h2>Example Output:</h2>
-                    <h3>{ "unix": 1450137600, "natural": "December 15, 2015" } </h3>
-                </div> <!-- /div -->
-            </div> <!-- /col-xs-12 -->
-        </div> <!-- /row --> 
+    <div class="container">        
+        <h1>Timestamp Microservice</h1>
+        <div>
+            <h2>What is this?</h2>
+            <h3>This is a web service which converts unix time to a human-readable form, or vice versa.</h3> 
+            <h2>How to use this service:</h2>
+            <h3>Append a forward slash followed by a <a href='https://en.wikipedia.org/wiki/Unix_time'>unix timestamp</a> or a natural
+            language date to the end of the URL in your browser's address bar. The service will return the provided
+            time in both unix timestamp and natural language format.</h3>
+            <h3>Natural language dates must follow this specific format: "Day Month Year" (e.g. "15 December 2015").</h3> 
+            <h3>If a mistake is made when passing a time to the service, it will produce "null" values in response.</h3>
+            <h2>Example Usage:</h2>
+            <h3 class="example">https://unix-nat.herokuapp.com/December 15 2015</h3>
+            <h3 class="example">https://unix-nat.herokuapp.com/1450137600</h3>
+            <h2>Example Output:</h2>
+            <h3>{ "unix": 1450137600, "natural": "December 15, 2015" } </h3>
+        </div>           
     </div> <!-- /container -->
 </body>

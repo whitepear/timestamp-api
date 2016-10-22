@@ -1,5 +1,28 @@
-.example {
-	color: #FF4357;
+body {
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+  background: #eee;
+  color: #333;
+}
+
+.container {
+	width: 99%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+a {
+	color: rgb(51, 122, 183);
+	text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+a:active, a:hover {
+	outline: 0;
 }
 
 .example {
